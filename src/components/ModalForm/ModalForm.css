@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-title {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+ h1::after {
+    content: '';
+    display: block;
+    width: 4.7rem;
+    height: 0.3rem;
+    background-color: #5b0594;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-box input, select {
+    margin: 0.8rem 0.0rem;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+    width: 35vh;
+
+}
+
+.continue-button button {
+    width: 101%;
+    margin-top: 10px auto;
+    border: none;
+    background-color: #5b0594;
+    padding: 0.65rem;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.continue-button button:hover {
+    background-color: #661a99;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media screen and (max-width: 300px){
+  .continue-button {
+    max-width: 50%;
+  }
+}
