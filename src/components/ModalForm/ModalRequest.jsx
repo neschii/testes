@@ -3,11 +3,11 @@ import './ModalRequest.css';
 
 
 const BUTTON_STYLE = {
-  position: 'absolute', // Change to absolute
-  top: '10px', // Adjust top position as needed
-  right: '10px', // Adjust left position as needed
-  border: 'none', // No border
-  cursor: 'pointer', // Pointer cursor on hover
+  position: 'absolute', 
+  top: '10px', 
+  right: '10px', 
+  border: 'none', 
+  cursor: 'pointer',
   borderRadius: '8px', 
   backgroundColor: '#3b3b3b',
   width: '25px',
@@ -17,19 +17,19 @@ const BUTTON_STYLE = {
 
 export default function ModalRequest({isOpen, children, setModalOpen}) {
 
-if(isOpen) { 
+if(isOpen) {  /* se esta aberto */
  return ( 
     <div className="bg-modal">  
       <div className="modal-style">
        <button 
-        onClick={() => setModalOpen()}
+        onClick={() => setModalOpen()} /* quando ser clickado ele vai ser fechado */
         style={BUTTON_STYLE}
-        aria-label="Fechar"
+        aria-label="Fechar" /* botão para fechar */
         >
           <span aria-hidden="true">&times;</span>
         </button>
 
-      <div className="">{children}</div>
+      <div className="">{children}</div> /* aqui é o que permite ter o corpo do formulario */
       </div>
 </div>
 )

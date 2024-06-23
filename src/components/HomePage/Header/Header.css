@@ -1,82 +1,99 @@
 .header {
-    background-color: #0000001c;
-    padding: 10px 20px;
-    color: white;
-    display: flex;
-    align-items: center; /* Center content vertically */
+  background-color: #00000000;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
 }
 
 .logo-gym {
-    max-width: 7%;
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer;
+  max-width: 7%;
+  height: auto; /* Mantém a proporção */
+  cursor: pointer;
 }
 
 .title-section {
-    margin-left: 1rem; /* Add some margin between logo and titles */
-    text-align: left; /* Align titles to the left */
+  margin-left: 1rem; /* Adiciona margem entre o logo e os títulos */
+  text-align: left; /* Alinha os títulos à esquerda */
 }
 
 .company-name {
-    font-weight: bold;
-    font-size: 20px;
-    color: red;
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
 }
 
 .slogan-title {
-    font-size: 14px; 
-    font-weight: bolder;
+  font-size: 14px;
+  font-weight: bolder;
 }
 
-.adress { 
-color: red;
-position: relative;
-font-size: 13px;
-top: 3.1rem;
-right: 42%; 
-text-decoration: underline;
-cursor: pointer;
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  position: relative; /* Define o posicionamento relativo */
+  top: 1rem; /* Ajusta a posição verticalmente */
 }
 
-.local { 
-position: relative;
-top: 1.8rem;
-right: 95%; 
-
+.address {
+  font-size: 13px;
+  cursor: pointer;
+  color: red; /* Cor diferente para endereço */
+  position: absolute; /* Define o posicionamento absoluto */
+  left: 17%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza corretamente */
+    top: 6.5rem;
 }
 
-.searchbar {
-  position: relative;
-  display: inline-block;
+.local {
+  font-size: 13px;
+  cursor: pointer;
+  color: rgb(255, 255, 255); /* Cor diferente para localização */
+  position: absolute; /* Define o posicionamento absoluto */
+  left: 9%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza corretamente */
+  top: 6.6rem; /* Ajusta a posição verticalmente */
 }
 
-input { 
-
-}
-
-/* Media Query for Responsiveness */
+/* Media Query para Responsividade */
 @media (max-width: 768px) {
-    .header {
-        padding: 0px; 
-        flex-direction: column; 
-        align-items: center; 
-    }
+  .header {
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .logo-gym {
-        max-width: 100%; 
-        height: auto; 
-        width: 6rem; 
-    }
+  .logo-gym {
+    max-width: 100%;
+    height: auto;
+    width: 6rem;
+  }
 
-    .title-section {
-        text-align: center;
-    }
+  .title-section {
+    text-align: center;
+  }
 
-    .company-name {
-        font-size: 18px; /* Adjust company title font size */
-    }
+  .company-name {
+    font-size: 18px; /* Ajusta o tamanho da fonte do título da empresa */
+  }
 
-    .slogan-title {
-        font-size: 12px; /* Adjust slogan title font size */
-    }
+  .slogan-title {
+    font-size: 12px; /* Ajusta o tamanho da fonte do slogan */
+  }
+
+  .info-container {
+    top: 0.5rem; /* Espaço menor entre o header e os elementos */
+  }
+.local {
+    top: 9rem; /* Ajusta a posição verticalmente */
+    left: 7rem;
+}
+
+  .address {
+    font-size: 12px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    top: 9rem; /* Ajusta a posição verticalmente */
+    left: 13rem;
+  }
 }
