@@ -1,0 +1,82 @@
+.header {
+    background-color: #0000001c;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.logo-gym {
+    max-width: 7%;
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+
+.title-section {
+    margin-left: 1rem; /* Add some margin between logo and titles */
+    text-align: left; /* Align titles to the left */
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+}
+
+.slogan-title {
+    font-size: 14px; 
+    font-weight: bolder;
+}
+
+.adress { 
+color: red;
+position: relative;
+font-size: 13px;
+top: 3.1rem;
+right: 42%; 
+text-decoration: underline;
+cursor: pointer;
+}
+
+.local { 
+position: relative;
+top: 1.8rem;
+right: 95%; 
+
+}
+
+.searchbar {
+  position: relative;
+  display: inline-block;
+}
+
+input { 
+
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        padding: 0px; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .logo-gym {
+        max-width: 100%; 
+        height: auto; 
+        width: 6rem; 
+    }
+
+    .title-section {
+        text-align: center;
+    }
+
+    .company-name {
+        font-size: 18px; /* Adjust company title font size */
+    }
+
+    .slogan-title {
+        font-size: 12px; /* Adjust slogan title font size */
+    }
+}

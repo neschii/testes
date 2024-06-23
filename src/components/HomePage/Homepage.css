@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/* Global reset and base styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for homepage content */
+.container-home {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text container for the main content */
+.text-container {
+    text-align: right;
+    position: relative;
+    top: 15rem; /* Adjusted distance from the top */
+}
+
+/* Title text style */
+.build-text {
+    font-size: 4rem;
+}
+
+/* Subtitle text style */
+.middle-text {
+    position: absolute;
+    top: calc(70% + 1rem); /* Adjusted distance from the top */
+    right:6.8rem;
+    transform: translateX(50%);
+}
+
+/* Body text style */
+.last-text {
+    position: absolute;
+    top: calc(7rem); /* Adjusted distance from the top */
+    right: 9px; /* Adjusted right positioning */
+}
+
+/* Red color for body text */
+.body-text {
+    color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-container {
+        text-align: center;
+        margin-top: -16rem; 
+    }
+
+    .build-text {
+        font-size: 3rem; 
+        
+    }
+
+    .body-text {
+        font-size: 3rem; 
+    }
+
+    .middle-text {
+        position: static; 
+        transform: none; 
+        margin-top: 0px; 
+    }
+
+    .last-text {
+        position: static;
+        transform: none; 
+        margin-top: auto;
+    }
+}
+

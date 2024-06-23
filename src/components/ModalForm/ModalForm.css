@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
-* {
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+.modal-success-container {
+    margin: 5rem auto;
+    text-align: center;
+    max-width: 80%;
+    padding: 1rem; /* Add padding for better spacing */
+    position: relative; /* Ensure relative positioning for absolute child */
 }
 
 .modal-title {
@@ -11,54 +11,161 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
 }
 
- h1::after {
+.modal-title::after {
     content: '';
     display: block;
     width: 4.7rem;
     height: 0.3rem;
-    background-color: #5b0594;
-    margin: 0 auto;
-    position: absolute;
+    background-color: #ff0000;
+    margin: 5px auto; /* Adjust margin for better positioning */
     border-radius: 10px;
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
 }
 
-.input-box input, select {
-    margin: 0.8rem 0.0rem;
-    padding: 1rem 3rem;
+.input-box input,
+.input-box select {
+    margin: 0.8rem 0;
+    padding: 1rem;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
-    width: 35vh;
-
+    width: 100%;
+    max-width: 35vh;
+    box-sizing: border-box;
 }
 
 .continue-button button {
-    width: 101%;
-    margin-top: 10px auto;
+    width: 100%;
+    margin-top: 10px;
     border: none;
-    background-color: #5b0594;
+    background-color: #bb1e1e;
     padding: 0.65rem;
     border-radius: 8px;
     cursor: pointer;
-    
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: black;
+    transition: background-color 400ms ease;
 }
 
 .continue-button button:hover {
-    background-color: #661a99;
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
 }
 
-.continue-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
+.join-content {
+    position: absolute;
+    transform: translateX(-52%);
 }
 
-@media screen and (max-width: 300px){
-  .continue-button {
-    max-width: 50%;
-  }
+.join-btn {
+    background-color: rgb(236, 236, 236);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: black;
+    padding: 0.6rem 2rem;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px lightgray;
+        width: fit-content;
+}
+
+.join-btn:hover {
+    background-color: #ff0000;
+    color: white;
+    box-shadow: 0px 2px 2px #ff0000;
+    transition: background-color 400ms ease, color 400ms ease, box-shadow 250ms ease;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .modal-success-container {
+        max-width: 80%; /* Decrease max-width for larger screens */
+        padding: 2rem 4rem; /* Adjust padding for larger screens */
+    }
+
+    .join-content {
+        top: calc(62%); /* Adjusted position for larger screens */
+        right: 14%; /* Adjusted right positioning for larger screens */
+    }
+
+
+    .continue-button button {
+        width: auto; /* Allow buttons to take up appropriate width */
+        padding: 1rem 8rem; /* Adjust button padding for larger screens */
+    }
+
+    .input-box input,
+    .input-box select {
+        max-width: 100%; /* Limit input width on larger screens */
+    }
+}
+
+
+/* Responsive adjustments for Modal Success Container */
+@media screen and (max-width: 768px) {
+    .modal-success-container {
+        max-width: 90%;
+        padding: 15rem 30px; /* Adjust padding for smaller screens */
+        font-size: 0.8rem; /* Decrease font size for smaller screens */
+    }
+
+    .join-content {
+        top: calc(40%); /* Adjusted position for smaller screens */
+        right: 20%; /* Adjusted right positioning for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-success-container {
+        max-width: 95%;
+        padding: 8px 10px; /* Further adjust padding for smaller screens */
+    }
+
+    .join-btn,
+    .continue-button button {
+        width: 100%;
+        padding: 0.8rem; /* Adjust button padding for smaller screens */
+    }
+
+    .input-box input,
+    .input-box select {
+        max-width: 100%; /* Ensure inputs and selects span full width on small screens */
+    }
+
+    .join-content {
+        top: calc(70%); /* Further adjust position for smaller screens */
+        right: 6%; /* Further adjust right positioning for smaller screens */
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .modal-success-container {
+        max-width: 95%;
+        padding: 8px 10px; /* Further adjust padding for smaller screens */
+    }
+
+    .join-btn,
+    .continue-button button {
+        width: 100%;
+        padding: 0.8rem; /* Adjust button padding for smaller screens */
+    }
+
+    .input-box input,
+    .input-box select {
+        max-width: 100%; /* Ensure inputs and selects span full width on small screens */
+    }
+
+    .join-content {
+        top: calc(80%); /* Further adjust position for smaller screens */
+        right: 0%; /* Further adjust right positioning for smaller screens */
+    }
 }

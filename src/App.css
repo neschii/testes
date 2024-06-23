@@ -1,25 +1,26 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0 ;
+  padding: 0;
   text-align: center;
+
+}
+
+body { 
+  min-height: 100vh;
 }
 
 
 @media screen and (max-width: 1330px) {
-    .form-image {
-        display: none;
-    }
-    .container {
+    .form-body {
         width: 50%;
     }
-    .form {
+    .input-box {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1064px) {
-    .container {
+    .form-body {
         width: 90%;
         height: auto;
     }

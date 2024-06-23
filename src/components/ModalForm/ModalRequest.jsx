@@ -29,7 +29,7 @@ if(isOpen) {
           <span aria-hidden="true">&times;</span>
         </button>
 
-      <div>{children}</div>
+      <div className="">{children}</div>
       </div>
 </div>
 )
