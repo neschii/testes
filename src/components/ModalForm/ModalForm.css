@@ -2,8 +2,8 @@
     margin: 5rem auto;
     text-align: center;
     max-width: 80%;
-    padding: 1rem; /* Add padding for better spacing */
-    position: relative; /* Ensure relative positioning for absolute child */
+    padding: 1rem; 
+    position: relative; 
 }
 
 .modal-title {
@@ -20,7 +20,7 @@
     width: 4.7rem;
     height: 0.3rem;
     background-color: #ff0000;
-    margin: 5px auto; /* Adjust margin for better positioning */
+    margin: 5px auto; 
     border-radius: 10px;
     position: absolute;
     bottom: -0.2rem;
